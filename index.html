@@ -202,6 +202,65 @@
 
       <div class="body-wrap">
   
+    <article id="post-学习VI和VIM编辑器读书笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/05/学习VI和VIM编辑器读书笔记（一）/" class="article-date">
+  	<time datetime="2016-05-05T08:23:25.788Z" itemprop="datePublished">2016-05-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/05/学习VI和VIM编辑器读书笔记（一）/">VI命令</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>vi:命令模式与插入模式</p>
+<h2 id="移动光标（命令模式）"><a href="#移动光标（命令模式）" class="headerlink" title="移动光标（命令模式）"></a>移动光标（命令模式）</h2><p>上、下、左、右键——一次一个字符<br>前进或后退一个文本块<br>在文件中一次一屏的前进或后退</p>
+<h3 id="单一的移动（数值参数）"><a href="#单一的移动（数值参数）" class="headerlink" title="单一的移动（数值参数）"></a>单一的移动（数值参数）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[n]h  向左一个(n个)字符</span><br><span class="line">[n]j  向下一行（n行）</span><br><span class="line">[n]k  向上一行（n行）</span><br><span class="line">[n]l  向右一个（n个）字符</span><br></pre></td></tr></table></figure>
+<p>记忆方法：左下上右（最左边、跳下、中出、最右边）</p>
+<h3 id="在一行中移动"><a href="#在一行中移动" class="headerlink" title="在一行中移动"></a>在一行中移动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0  移到一行的开头</span><br><span class="line">$  移到一行的结尾</span><br></pre></td></tr></table></figure>
+<h3 id="按照文本块来移动"><a href="#按照文本块来移动" class="headerlink" title="按照文本块来移动"></a>按照文本块来移动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">w  使光标移动到下一个单词（包括符号和标点）</span><br><span class="line">W  使光标移动到下一个单词（不包括符号和标点）</span><br><span class="line">b  使光标后退一个单词</span><br><span class="line">B  使光标后退一个单词（不包括符号和标点）</span><br><span class="line">[n]G  移动到指定行(单独G将移动到文件的结尾)</span><br></pre></td></tr></table></figure>
+<p>记忆方法：    w：word（单词）<br>            b：back （返回back word）<br>            G：GO TO（去往）<br>以上皆可接受数值参数。</p>
+<h3 id="简单的编辑"><a href="#简单的编辑" class="headerlink" title="简单的编辑"></a>简单的编辑</h3>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

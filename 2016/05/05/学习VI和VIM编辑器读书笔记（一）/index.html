@@ -4,21 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hello World | SoulThinker&#39;s Blog</title>
+  <title>VI命令 | SoulThinker&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="vi:命令模式与插入模式
+移动光标（命令模式）上、下、左、右键——一次一个字符前进或后退一个文本块在文件中一次一屏的前进或后退
+单一的移动（数值参数）1234[n]h  向左一个(n个)字符[n]j  向下一行（n行）[n]k  向上一行（n行）[n]l  向右一个（n个）字符
+记忆方法：左下上右（最左边、跳下、中出、最右边）
+在一行中移动120  移到一行的开头$  移到一行的结尾
+按照文本块来">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/05/04/hello-world/index.html">
+<meta property="og:title" content="VI命令">
+<meta property="og:url" content="http://yoursite.com/2016/05/05/学习VI和VIM编辑器读书笔记（一）/index.html">
 <meta property="og:site_name" content="SoulThinker's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-05-04T15:13:47.650Z">
+<meta property="og:description" content="vi:命令模式与插入模式
+移动光标（命令模式）上、下、左、右键——一次一个字符前进或后退一个文本块在文件中一次一屏的前进或后退
+单一的移动（数值参数）1234[n]h  向左一个(n个)字符[n]j  向下一行（n行）[n]k  向上一行（n行）[n]l  向右一个（n个）字符
+记忆方法：左下上右（最左边、跳下、中出、最右边）
+在一行中移动120  移到一行的开头$  移到一行的结尾
+按照文本块来">
+<meta property="og:updated_time" content="2016-05-09T05:53:23.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="VI命令">
+<meta name="twitter:description" content="vi:命令模式与插入模式
+移动光标（命令模式）上、下、左、右键——一次一个字符前进或后退一个文本块在文件中一次一屏的前进或后退
+单一的移动（数值参数）1234[n]h  向左一个(n个)字符[n]j  向下一行（n行）[n]k  向上一行（n行）[n]l  向右一个（n个）字符
+记忆方法：左下上右（最左边、跳下、中出、最右边）
+在一行中移动120  移到一行的开头$  移到一行的结尾
+按照文本块来">
   
     <link rel="alternative" href="/atom.xml" title="SoulThinker&#39;s Blog" type="application/atom+xml">
   
@@ -204,11 +216,11 @@ Quick">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-学习VI和VIM编辑器读书笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/04/hello-world/" class="article-date">
-  	<time datetime="2016-05-04T15:13:47.650Z" itemprop="datePublished">2016-05-04</time>
+      <a href="/2016/05/05/学习VI和VIM编辑器读书笔记（一）/" class="article-date">
+  	<time datetime="2016-05-05T08:23:25.788Z" itemprop="datePublished">2016-05-05</time>
 </a>
     </div>
   
@@ -221,7 +233,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      VI命令
     </h1>
   
 
@@ -237,16 +249,14 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p>vi:命令模式与插入模式</p>
+<h2 id="移动光标（命令模式）"><a href="#移动光标（命令模式）" class="headerlink" title="移动光标（命令模式）"></a>移动光标（命令模式）</h2><p>上、下、左、右键——一次一个字符<br>前进或后退一个文本块<br>在文件中一次一屏的前进或后退</p>
+<h3 id="单一的移动（数值参数）"><a href="#单一的移动（数值参数）" class="headerlink" title="单一的移动（数值参数）"></a>单一的移动（数值参数）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[n]h  向左一个(n个)字符</span><br><span class="line">[n]j  向下一行（n行）</span><br><span class="line">[n]k  向上一行（n行）</span><br><span class="line">[n]l  向右一个（n个）字符</span><br></pre></td></tr></table></figure>
+<p>记忆方法：左下上右（最左边、跳下、中出、最右边）</p>
+<h3 id="在一行中移动"><a href="#在一行中移动" class="headerlink" title="在一行中移动"></a>在一行中移动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0  移到一行的开头</span><br><span class="line">$  移到一行的结尾</span><br></pre></td></tr></table></figure>
+<h3 id="按照文本块来移动"><a href="#按照文本块来移动" class="headerlink" title="按照文本块来移动"></a>按照文本块来移动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">w  使光标移动到下一个单词（包括符号和标点）</span><br><span class="line">W  使光标移动到下一个单词（不包括符号和标点）</span><br><span class="line">b  使光标后退一个单词</span><br><span class="line">B  使光标后退一个单词（不包括符号和标点）</span><br><span class="line">[n]G  移动到指定行(单独G将移动到文件的结尾)</span><br></pre></td></tr></table></figure>
+<p>记忆方法：    w：word（单词）<br>            b：back （返回back word）<br>            G：GO TO（去往）<br>以上皆可接受数值参数。</p>
+<h3 id="简单的编辑"><a href="#简单的编辑" class="headerlink" title="简单的编辑"></a>简单的编辑</h3>
       
     </div>
     
@@ -255,15 +265,11 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2016/05/05/学习VI和VIM编辑器读书笔记（一）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          VI命令
-        
-      </div>
-    </a>
   
+    <a href="/2016/05/04/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -296,7 +302,7 @@ Quick">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hello-world" data-title="Hello World" data-url="http://yoursite.com/2016/05/04/hello-world/"></div>
+	<div class="ds-thread" data-thread-key="学习VI和VIM编辑器读书笔记（一）" data-title="VI命令" data-url="http://yoursite.com/2016/05/05/学习VI和VIM编辑器读书笔记（一）/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
