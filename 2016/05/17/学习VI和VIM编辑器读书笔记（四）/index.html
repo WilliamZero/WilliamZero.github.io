@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>ex编辑器概述 | SoulThinker&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##vi其实是更通用、更底层的ex行编辑器的”可视模式”
+###ex命令ex命令中包含了行地址（可能只是一个行号）以及命令，以换行符结束。一个最基本的命令是p，代表打印（到屏幕上）。：1p    p可以省略，因为行号本身与显示出此行的命令是相同的。显示多行（1，3—两个数值之间用逗号分隔，中建有没有空格无所谓）替换命令：sag：    ：1s/one/two   将第一行的one换成two在vi中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ex编辑器概述">
+<meta property="og:url" content="http://yoursite.com/2016/05/17/学习VI和VIM编辑器读书笔记（四）/index.html">
+<meta property="og:site_name" content="SoulThinker's Blog">
+<meta property="og:description" content="##vi其实是更通用、更底层的ex行编辑器的”可视模式”
+###ex命令ex命令中包含了行地址（可能只是一个行号）以及命令，以换行符结束。一个最基本的命令是p，代表打印（到屏幕上）。：1p    p可以省略，因为行号本身与显示出此行的命令是相同的。显示多行（1，3—两个数值之间用逗号分隔，中建有没有空格无所谓）替换命令：sag：    ：1s/one/two   将第一行的one换成two在vi中">
+<meta property="og:updated_time" content="2016-05-19T13:25:03.681Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ex编辑器概述">
+<meta name="twitter:description" content="##vi其实是更通用、更底层的ex行编辑器的”可视模式”
+###ex命令ex命令中包含了行地址（可能只是一个行号）以及命令，以换行符结束。一个最基本的命令是p，代表打印（到屏幕上）。：1p    p可以省略，因为行号本身与显示出此行的命令是相同的。显示多行（1，3—两个数值之间用逗号分隔，中建有没有空格无所谓）替换命令：sag：    ：1s/one/two   将第一行的one换成two在vi中">
+  
+    <link rel="alternative" href="/atom.xml" title="SoulThinker&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">张伟</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">笃实</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">张伟</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">张伟</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">笃实</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-学习VI和VIM编辑器读书笔记（四）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/17/学习VI和VIM编辑器读书笔记（四）/" class="article-date">
+  	<time datetime="2016-05-17T15:28:12.462Z" itemprop="datePublished">2016-05-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ex编辑器概述
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##<br>vi其实是更通用、更底层的ex行编辑器的”可视模式”</p>
+<p>###ex命令<br>ex命令中包含了行地址（可能只是一个行号）以及命令，以换行符结束。<br>一个最基本的命令是p，代表打印（到屏幕上）。<br>：1p    p可以省略，因为行号本身与显示出此行的命令是相同的。<br>显示多行（1，3—两个数值之间用逗号分隔，中建有没有空格无所谓）<br>替换命令：s<br>ag：    ：1s/one/two   将第一行的one换成two<br>在vi中使用ex命令，必须输入特定字符：（冒号）。输入命令后，按ENTER来执行。</p>
+<p>###用ex编辑<br>常用的ex命令与其缩写：<br>Full name    Abbreviation    Meaning<br>delete        d                删除行<br>move        m                移动行<br>copy        co                复制行<br>            t                复制行</p>
+<p>###行地址<br>每一个ex编辑命令都需要编辑的行号。而对ex的move与copy命令来说，还必须提供文本移动或复制的目的地。<br>指定行地址的方法有以下几种：<br>1、指定明确的行号<br>2、用符号来指定相对于当前位置的行号<br>3、标识某些行的搜索模式作为地址</p>
+<p>####定义行范围<br>明确指定行号的地址称为绝对行地址<br>eg：<br>：3,18d        删除第3行到第18行<br>：160,224m23        将第160行到第224行移动到第23行之后<br>：23,29co100        将第23行到29行复制到第100行之后</p>
+<p>禁用set行号选项<br>：set nonu<br>暂时显示行号<br>：1，10#<br>ex的=命令<br>：=        列出文件的总行数<br>：.=        列出当前所在行的行号<br>：/pattern/=        列出pattern第一次出现时的行号</p>
+<p>####行寻址符号<br>用符号表示行地址。<br>点号（.)表示当前这一行<br>$表示文件的最后一行<br>%表示文件中的每一行 == 1,$<br>eg:<br>:.,$d        删除当前这一行到文件结尾间的文本<br>:20,.m$        将第20行到当前这一行间的文本移动到文件结尾<br>使用相对地址（+与-）（++与–）<br>：.,.+20d        删除当前这一行到20行之后的行之间的文本<br>：226,$m.-2        将226行到文件结尾间的行移动到当前行的两行之前<br>：.,+20#            显示当前这一行及向下20行之间的行号<br>（.点号时=是可以省略的，当前行会被假定为开始的位置）<br>数字0表示文件的开头</p>
+<p>####搜索模式<br>另一个可以指定行地址的方法是使用搜索模式<br>eg：<br>:/pattern/d            删除下一个包含pattern的行<br>:/pattern/+d        删除下一个包含pattern的行的下一行</p>
+<p>###重新定义当前这一行的位置<br>使用分号代替逗号时，第一个行地址会被当成光标当前的地址。<br>eg：<br>：100;+5 p<br>此时的+5是相对于第100行计算的，而不是光标所在的位置。<br>分号对于搜索模式的绝对地址很有用。</p>
+<p>###全局搜索<br>ex全局命令g<br>:g     搜索模式并显示所有包含这个模式的行。<br>:g!        搜索所有不包含指定模式的行  ==  ：v</p>
+<p>eg:<br>:g/pattern        寻找文件中最后一次出现pattern的地方<br>:g/pattern/p    寻找并显示文件中所有包含pattern的行<br>:20,40g!/pattern/p        寻找并显示第20到40行之间不包含pattern的行</p>
+<p>###合并ex命令<br>在ex中，竖线（|）可以分割命令。<br>在使用时，记住所指定的行地址。如果某个命令影响了文件中各行的顺序，下一个命令将在新的行地址上运作。<br>eg：<br>：1，3d | s/thire/their/<br>删除第一行到第3行，接着在当前行做替换（即原来的第四行）</p>
+<p>###保存于离开文件</p>
+<p>:w        将缓冲区的内容写入文件中，但不离开。<br>:q        离开编辑器<br>:wq        写入文件同时离开编辑器<br>:x        写入文件同时离开编辑器。（只有文件修改过才会写入）<br>:w!        强制写入文件<br>:q!        离开编辑器而不影响原来的文件</p>
+<p>####更改缓冲区名称<br>:w    newfile        将缓冲区以新的文件名保存，原来的文件内容不会改变。</p>
+<p>####保存一部分的文件<br>将行寻址命令与写入命令w相结合可以保存一部分文件。<br>:20,$w newfile         将第20行到文件结尾保存成名为newfile的文件</p>
+<p>####附加内容到已保存的文件<br>附加运算符（&gt;&gt;）<br>:1,10w newfile<br>:340,$w &gt;&gt;newfile<br>将第1-10行以及第340行到缓冲区的结尾写入newfile中</p>
+<p>###将一个文件复制到另一个文件</p>
+<p>:read filename 或 :r filename 把filename的内容插入到光标所在位置的下一行。<br>:11r /home/data        将data的内容插入到当前文件11行的下一行。<br>:/pattern/r /home/data   将读入的文件放在第一个出现pattern的行之后。</p>
+<p>###编辑多个文件</p>
+<p>####用vi同时打开多个文件<br>vi file1 file2<br>即可先编辑file1，然后使用ex命令：w 写入（存储）file1，此时：n会调用下一个文件（file2）</p>
+<p>####使用参数列表</p>
+<p>:args参数（简写为:ar）可列出命令行上的文件列表，当前编辑中的文件名称以方括号括起。<br>:rewind(:rew) 命令会将当前文件复位成命令行上的第一个文件。<br>vim提供了对应的命令：last，用于移动其成命令行上的最后一个。</p>
+<p>####调用新文件</p>
+<p>:e命令可以在任何时候切换到另一个文件<br>如果要在vi中编辑另一个文件，必须先保存当前文件（：w），再下命令 ：e filename</p>
+<p>vi会同时记住两个文件名，作为当前的与候补的文件名，他们用<br>符号% （代表当前的文件名）与 #（代表候补的文件名）来表示。<br>:e # 回到上一个文件    :r # 将上一个文件的内容读到当前的文件中。（前提是当前文件保存）<br>:e!  放弃编辑结果，并恢复当前文件的上一个已保存版本的内容。（重新载入文件）</p>
+<p>%主要用于写出当前缓冲区的内容到另一个新文件中。<br>:w %.new</p>
+<p>####在vi中切换文件<br>ctrl+^ 命令可用于切换文件（当前缓冲区的内容已经保存）</p>
+<p>###在文件之间做编辑<br>使用命名缓冲区<br>“f4yy<br>:w<br>:e letter<br>“fp</p>
+<p>使用ex命令：ya（拖动）与：pu（放置）</p>
+<p>eg：<br>:160,220ya  a<br>将第160行到第220行之间的文本复制到缓冲区a中。<br>:e filenew   将光标移动到放置文本的行<br>:pu a<br>将缓冲区a的内容放置到当前行的下一行。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/18/Centos6.5安装YouCompleteMe过程/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Centos6.5安装YouCompleteMe（自动补全工具）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/17/学习VI和VIM编辑器读书笔记（三）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">越过基础的藩篱</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="学习VI和VIM编辑器读书笔记（四）" data-title="ex编辑器概述" data-url="http://yoursite.com/2016/05/17/学习VI和VIM编辑器读书笔记（四）/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 张伟
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -202,6 +202,501 @@
 
       <div class="body-wrap">
   
+    <article id="post-学习VI和VIM编辑器读书笔记（七）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/26/学习VI和VIM编辑器读书笔记（七）/" class="article-date">
+  	<time datetime="2016-05-26T08:34:04.872Z" itemprop="datePublished">2016-05-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/26/学习VI和VIM编辑器读书笔记（七）/">vi同类品的功能总览</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在这里，我们只关注一些vim的功能主题。</p>
+<h3 id="多窗口编辑"><a href="#多窗口编辑" class="headerlink" title="多窗口编辑"></a>多窗口编辑</h3><p>缓冲区：保存了要编辑的文本。任何一个 文件都只有一个对应的缓冲区。<br>窗口：提供对缓冲区的观察窗口，让我们可以查看与修改缓冲区中的内容。</p>
+<h3 id="扩展正则表达式"><a href="#扩展正则表达式" class="headerlink" title="扩展正则表达式"></a>扩展正则表达式</h3><p>以后学习</p>
+<h3 id="增强的标签"><a href="#增强的标签" class="headerlink" title="增强的标签"></a>增强的标签</h3><p>标签栈：用：tag或^]命令来存储多个访问过的位置。</p>
+<h4 id="Exuberant-ctags"><a href="#Exuberant-ctags" class="headerlink" title="Exuberant ctags"></a>Exuberant ctags</h4><p>Exuberant ctags插件<br>能够产生所有类型的c与c++语言标签<br>支持c与c++代码</p>
+<h4 id="新的tags文件格式"><a href="#新的tags文件格式" class="headerlink" title="新的tags文件格式"></a>新的tags文件格式</h4><p>传统的tags文件有三个制表符分割的字段：<br>标签名称（一般是标识符）、包含标签的源文件、何处可找到标识符的指示符。<br>新的格式：<br>标签名称（一般是标识符）、包含标签的源文件、何处可找到标识符的指示符:;、描述属性的关键字：实际的值（可有多个，以tab分隔）<br>扩展的ctags关键字<br>关键字    意义<br>kind    单一字母，代表标签的词汇类型。f：函数、v：变量等<br>file    针对“静态”的标签，值为文件的名称。若值为空，则会以文件名字段为准。<br>function    针对本地的标签。其值是所定义的函数的名称。<br>struct        针对struct中的字段。其值是结构的名称。<br>enum        针对enum数据类型的值。其值为enum类型的名称。<br>class        针对c++的成员函数与变量。其值是类的名称。<br>scope        针对C++的类成员函数。（priviate）<br>arity        针对函数。定义参数的个数。</p>
+<p>eg：<br>ARRAYMAXED    awk.h    427;”     d<br>AVG_CHAIN_MAX    array.c    28;”    d    file:<br>array.c        array.c        1;”        F<br>第三个使用：tag array.c命令。或者将光标移动到文件名上，再使用^[命令移到该文件中。</p>
+<h4 id="标签栈"><a href="#标签栈" class="headerlink" title="标签栈"></a>标签栈</h4><p>以后说明</p>
+<h4 id="Exuberant-ctags与vim"><a href="#Exuberant-ctags与vim" class="headerlink" title="Exuberant ctags与vim"></a>Exuberant ctags与vim</h4><p>创建tags文件，然后编辑主程序（137页）<br>ctags *.[ch]<br>ls<br>Makefile getopt.c tags getopt.h main.c<br>vim main.c</p>
+<h4 id="改进的便利功能"><a href="#改进的便利功能" class="headerlink" title="改进的便利功能"></a>改进的便利功能</h4><p>编辑ex命令行（历史记录与命令补全）–之后介绍<br>没有行长度的限制<br>不限次数的撤销<br>增量搜索：输入欲搜索的模式可立即在文本中开始搜索<br>        选项：incsearch<br>左右滚动        滚动量 sidescroll = 0  选项 wrap<br>可视模式<br>模式指示器    选项：showmode</p>
+<h4 id="编程辅助"><a href="#编程辅助" class="headerlink" title="编程辅助"></a>编程辅助</h4><h4 id="编辑-编译的加速"><a href="#编辑-编译的加速" class="headerlink" title="编辑-编译的加速"></a>编辑-编译的加速</h4><p>在文件中直接编译<br>：make file<br>后面介绍</p>
+<h4 id="语法高亮显示"><a href="#语法高亮显示" class="headerlink" title="语法高亮显示"></a>语法高亮显示</h4><p>省略</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-学习VI和VIM编辑器读书笔记（六）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/23/学习VI和VIM编辑器读书笔记（六）/" class="article-date">
+  	<time datetime="2016-05-23T06:05:31.268Z" itemprop="datePublished">2016-05-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/23/学习VI和VIM编辑器读书笔记（六）/">高级编辑方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="自定义vi"><a href="#自定义vi" class="headerlink" title="自定义vi"></a>自定义vi</h2><p>使用ex命令：set 在vi中改变选项。<br>vi被打开，就会读入主目录中的.exrc文件。也可以读入当前目录的.exrc文件（会覆盖主目录的重复选项）<br>vim被打开，就会读入主目录中的.vimrc文件。<br>若文件不存在，可自己手动创建。</p>
+<h3 id="：set命令"><a href="#：set命令" class="headerlink" title="：set命令"></a>：set命令</h3><p>：set命令可以更改两种类型的选项：一种是切换选项，只能选择是或否；另一种可接受数值或者字符串。<br>：set all    显示选项的完整列表。<br>对于切换选项<br>：set option   选项打开<br>：set nooption 选项关闭<br>：set option？ 查找选项的当前值</p>
+<h3 id="一些有用的选项"><a href="#一些有用的选项" class="headerlink" title="一些有用的选项"></a>一些有用的选项</h3><p>区分大小写  noignorecase<br>回到文件开头继续搜索    wrapscan<br>于匹配模式辨识通配符    magic<br>。。。</p>
+<h2 id="执行Unix命令"><a href="#执行Unix命令" class="headerlink" title="执行Unix命令"></a>执行Unix命令</h2><p>：！command<br>：read命令可以与Unix命令结合，把Unix命令的结果读到文件中去。<br>：r ！date    将系统日期读到文件中<br>：r    ！sort file  将文件排序后读入</p>
+<h3 id="通过命令过滤文本"><a href="#通过命令过滤文本" class="headerlink" title="通过命令过滤文本"></a>通过命令过滤文本</h3><p>ex用行地址来指示文本块<br>vi用文本对象（移动命令）来指示</p>
+<h4 id="用ex过滤文本"><a href="#用ex过滤文本" class="headerlink" title="用ex过滤文本"></a>用ex过滤文本</h4><p>：96，99|sort    将96到99行的文本送给sort过滤，其结果则替换原有的内容</p>
+<h4 id="用vi过滤文本"><a href="#用vi过滤文本" class="headerlink" title="用vi过滤文本"></a>用vi过滤文本</h4><p>！）command        将下一个句子传送给command<br>文本块必须超过一行。（G，{}，（），[[]]、+、-）  ！10+表示下10行</p>
+<h3 id="保存命令"><a href="#保存命令" class="headerlink" title="保存命令"></a>保存命令</h3><h4 id="单词缩写"><a href="#单词缩写" class="headerlink" title="单词缩写"></a>单词缩写</h4><p>定义缩写，使用ex命令：ab abbr phrase<br>abbr为phrase的缩写，在插入模式输入abbr回车，就会展开为phtase。<br>取消缩写    ：unab abbr<br>列出当前所定义的缩写    ：ab</p>
+<h4 id="使用map命令"><a href="#使用map命令" class="headerlink" title="使用map命令"></a>使用map命令</h4><p>：map x sequence        定义字符x映射到一个编辑命令sequence<br>：unmap x        取消x的映射<br>：map            列出所有被映射的字符<br>：help map        map帮助信息</p>
+<p>个人感觉不必深究，明白.vimrc中的一些配置即可。之后会解析一个目前在用的一个配置文件。</p>
+<h4 id="保护按键免被ex解释"><a href="#保护按键免被ex解释" class="headerlink" title="保护按键免被ex解释"></a>保护按键免被ex解释</h4><p>ENTER、ESC、BACKSPACE、DELETE 这些按键已经在ex中有定义了。如果想将这类按键作为命令序列的一部分，必须在前面加上CTRL-V，转换按键的正常意义。</p>
+<p>要将控制字符作为映射命令，在大部分情况下，只需要按着CTRL键并同时按下字母键。但有三个控制字符必须用^（CTRL-V）做转义，即为^T,^W,^X。<br>：map  CTRL-VCTRL-T sequence</p>
+<h4 id="复杂的映射范例"><a href="#复杂的映射范例" class="headerlink" title="复杂的映射范例"></a>复杂的映射范例</h4><p>定义复杂映射最好的方法是先手动编辑，写下每个按键组合；接着用按键组合创建映射键。</p>
+<h4 id="更多映射按键的范例"><a href="#更多映射按键的范例" class="headerlink" title="更多映射按键的范例"></a>更多映射按键的范例</h4><p>1.当移动到单词结尾时加入文本：<br>    ：map e    ea<br>2.对调两个单词<br>    ：map K dwwP<br>3.保存一个文件并编辑下一个文件<br>    ：map q ：w^M:n^M<br>4.重复地寻找与删除一个单词或词组周围的括号<br>    ：map = xf）xn<br>    前提：先用/（ 加回车找到了一个左括号。</p>
+<h4 id="插入模式中的映射键"><a href="#插入模式中的映射键" class="headerlink" title="插入模式中的映射键"></a>插入模式中的映射键</h4><p>在map命令后加上感叹号（！），即可强制覆盖按键原来的意义，以产生插入模式中的映射行为。<br>eg：  ：map！ % ^[kA:^[jA<br>    在当前任意位置输入%，会使上一行结尾加上：<br>解除插入模式的映射键<br>：unmap！ 字符</p>
+<h3 id="映射功能键"><a href="#映射功能键" class="headerlink" title="映射功能键"></a>映射功能键</h3><p>ex 允许使用数值来映射功能键（#1 代表F1，#2 代表F2）<br>：map #1 command</p>
+<p>查看功能键产生的内容<br>od -c（显示每个字符）<br>od -c 回车<br>F1 回车<br>CTRL+D</p>
+<h3 id="映射其他特殊键"><a href="#映射其他特殊键" class="headerlink" title="映射其他特殊键"></a>映射其他特殊键</h3><p>HOME END PAGEUP PAGEDOWN<br>eg:<br>:map CTRL-V HOME 1G</p>
+<h3 id="映射多个输入键"><a href="#映射多个输入键" class="headerlink" title="映射多个输入键"></a>映射多个输入键</h3><p>映射多个按键并不只限于功能键，也饿可以对应一般的按键。</p>
+<h3 id="功能（待理解）"><a href="#功能（待理解）" class="headerlink" title="@功能（待理解）"></a>@功能（待理解）</h3><h3 id="使用ex脚本"><a href="#使用ex脚本" class="headerlink" title="使用ex脚本"></a>使用ex脚本</h3><p>编写脚本exscript，如下：<br>%s/thier/their/g<br>wq<br>在vi中执行这个脚本<br>：so exscript</p>
+<h4 id="ex脚本中的注释"><a href="#ex脚本中的注释" class="headerlink" title="ex脚本中的注释"></a>ex脚本中的注释</h4><p>在ex脚本中，任何双引号后的文本在执行时都会被忽略。</p>
+<h3 id="编辑程序源代码"><a href="#编辑程序源代码" class="headerlink" title="编辑程序源代码"></a>编辑程序源代码</h3><h4 id="缩排控制"><a href="#缩排控制" class="headerlink" title="缩排控制"></a>缩排控制</h4><p>vi提供自动缩排控制<br>：set autoindent<br>插入模式下：在一行开头按下CTRL-T 会出现下一层的缩排，按下CTRL-D 可回到上一个缩排的层级。</p>
+<p>命令模式下：&gt;&gt; 默认向右移动8个空格，&lt;&lt; 默认向左移动8个空格。（shift &lt;&lt;）<br> 设置移动空格数<br>：set shiftwidth=4</p>
+<p>更改显示状态 ：tab–^I  行尾：$<br>：set list<br>或临时命令：l<br>：5，20 l</p>
+<h4 id="一个特殊的搜索命令"><a href="#一个特殊的搜索命令" class="headerlink" title="一个特殊的搜索命令"></a>一个特殊的搜索命令</h4><p>匹配括号： %<br>或：<br>:set showmatch</p>
+<h3 id="使用标签（tag）"><a href="#使用标签（tag）" class="headerlink" title="使用标签（tag）"></a>使用标签（tag）</h3><p>ctags命令在Unix命令行上执行。它的功能是产生一个信息文件，让vi可用该文件判断各个文件中分别定义了哪些函数。<br>默认情况下，这个文件名为tags。在vi中，下面的命令<br>：!ctags file.c<br>会在当前目录中创建一个名为tags的文件，其中包含file.c 中定义的所有函数的信息。<br>：!ctags *.c<br>会创建描述所有C源代码文件中的tags文件。<br>如果想观察或编辑程序中的某个函数，则在vi中，使用<br>:tag name<br>会在tags文件中寻找哪一个文件包含了函数name的定义。接着vi读入这个文件，并将光标指到定义name函数的那一行。</p>
+<p>在vi的命令模式中使用标签功能<br>将光标移到要查找的标识符（开头）上，再输入 ^] 。vi会执行标签查找，并将光标移到定义了标识符的文件中。（先将当前编辑文件保存）</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-学习VI和VIM编辑器读书笔记（五）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/19/学习VI和VIM编辑器读书笔记（五）/" class="article-date">
+  	<time datetime="2016-05-19T13:26:46.294Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/19/学习VI和VIM编辑器读书笔记（五）/">全局替换</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ex命令： :g(global，全局)与:s(substitute，替换)<br>替换命令：<br>:s/old/new/        将当前行第一个出现的模式old替换为new<br>:s/old/new/g    将当前行中的每一个old替换为new<br>:%s/old/new/g    将每一行的所有old替换为new</p>
+<p>###确认替换<br>在每次替换之前做确认，可以在替换命令的结尾加上c选项(confirm)<br>:1,30s/his/the/gc<br>确认替换，必须输入y再按下ENTER，不想替换，只要按下ENTER。</p>
+<p>将vi命令中的n（重复上一次搜索）与点号(.)（重复上一个命令）结合起来！<br>/which        搜索which<br>cwthatESC    改成that<br>n            重复搜索<br>n            重复搜索<br>.            重复修改</p>
+<h3 id="与上下文相关的替换"><a href="#与上下文相关的替换" class="headerlink" title="与上下文相关的替换"></a>与上下文相关的替换</h3><p>:g/pattern/s/old/new/g<br>第一个g指示对文件中的所有行起作用。<br>pattern用于识别发生替换的行。<br>对包含pattern的行，ex将old替换为new。<br>最后g表示在哪一行做全局替换。</p>
+<p>如果用于搜索行的模式与用于替换的模式一样，可以省略old<br>:g/string/s//new/g<br>== :%s/string/new/g</p>
+<p>###模式匹配的规则<br>正则表达式：将一般的字符与许多特殊的元字符结合起来的表达式、</p>
+<p>####用在搜索模式中的元字符<br>.(点号)<br>    匹配出任何单一字符（换行符除外）<br>*<br>    匹配出位于此符号前的单一字符，该字符可出现0到多次。<br>^<br>    在正则表达式的开头时，表示一行的开头<br>$<br>    在正则表达式的结尾时，代表一行的结尾<br>\<br>    将后续的特殊字符变为一般字符，阻止特殊字符被解释<br>[ ]<br>    匹配方括号里的任何一个字符    。<br>    在方括号中有3个元字符需要转义：\、-、].<br>    -表示范围指示符<br>    插入符号（^）位于方括号中的第一个时，表示匹配出任何一个不在方括号中字符范围内的字符。<br>( )<br>    将(和)间的模式保存到特殊的空间（保留缓冲区）可以保存任意一行中的9个模式。<br>    ：%s/(That) or (this)/\2 or \1/g<br>    That保存在保留缓冲区1中，this保存在保留缓冲区2中。这些保留的模式可以用\1-\9的序列重新显示。<br>\&lt; ><br>    匹配以某些字符开头（/&lt;）或结尾（/&gt;）的字符。</p>
+<h4 id="posix方括号表达式"><a href="#posix方括号表达式" class="headerlink" title="posix方括号表达式"></a>posix方括号表达式</h4><p>在posix标准中，方括号内的字符组称为“方括号表达式”<br>在方括号表达式中，除了a、！等文字字符之外，还包括其他的元素，包括：<br>字符类：包括了用 [:与:]括起来的关键字。关键字描述了不同的字符类，包括字母字符、控制字符等等。<br>校对符号：由多个字符组成的序列，但必须被当成一个单位（整体）。使用[. 与.]括起所需的字符。<br>等价类：等价类列出了所有应该被当做相等的字符集合。用[=与=]括起来。[=e=]可能匹配出e、`e.</p>
+<p>POSIX字符类型<br>类型                    比较出的字符<br>[:alnum:]            字母与数字字符<br>[:alpha:]            字母字符<br>[:cntrl:]            控制字符<br>[:lower:]            小写字符<br>[:digit:]            数字字符<br>[:upper:]            大写字符<br>…</p>
+<h4 id="用在替换字符串中的元字符"><a href="#用在替换字符串中的元字符" class="headerlink" title="用在替换字符串中的元字符"></a>用在替换字符串中的元字符</h4><p>在全局替换时，之前提到的元字符只在命令的搜索部分（第一部分）中有特殊意义。</p>
+<p>在替换字符串中有特殊意义的元字符：<br>\n（数字）：利用(与)存储的第n个模式的文字做代换，n表示数字1到9.<br>\    ：将后面的一个特殊字符当成一般的字符。<br>&amp;    ：用在替换字符串中时，会被替换成搜索模式匹配出的完整文本。<br>~    ：匹配的字符串会被最后一个替换命令中的替换文本替换。在重复编辑时很有用。<br>\u或\l：使替换字符串中的下一个字符变为大写或小写。<br>        eg： :s/(That) or (this)/\u\2 or \l\1/</p>
+<p>\U或\L与\e或\E<br>    :\U与\L将所有接在后面的字符都转换为大写或小写的，一直到替换字符串结束，或出现\e或\E为止。</p>
+<h4 id="更多替换技巧"><a href="#更多替换技巧" class="headerlink" title="更多替换技巧"></a>更多替换技巧</h4><p>:s 重复上一次替换<br>:%&amp;g 在所有地方重复上一个替换<br>:&amp;  重复上一个替换<br>:~    搜索的模式是上一个出现的正则表达式，替换的字符串是上一个替换命令中的字符串。<br>    :s/red/blue<br>    :/green<br>    :~  == :s/green/blue<br>替换命令的分割字符除了/之外，可以为任何非字母、非数值、非空格的字符； 但是反斜线、双引号、与竖线例外。更改路径名称时  :s;/user;/home;g</p>
+<h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><p>将所有出现的help（或Help）改为HELP<br> :%s/[Hh]elp/\U&amp;/g<br>删除所有空白行<br>:g/^$/d</p>
+<p>思考一个匹配模式时，通常比较好的做法是更精准地修改变量（元字符），而不是用特定的文字来限制模式。在模式中运用越多变量，命令的力量就会越强大。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Centos6.5安装YouCompleteMe过程" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/18/Centos6.5安装YouCompleteMe过程/" class="article-date">
+  	<time datetime="2016-05-18T01:43:37.154Z" itemprop="datePublished">2016-05-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/18/Centos6.5安装YouCompleteMe过程/">Centos6.5安装YouCompleteMe（自动补全工具）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##前言<br>YouCompleteMe是一个对vim编程者提供自动补全的插件，对于编程提供好的体验。</p>
+<p>安装系统：centos6.5<br>安装准备：良好的网略环境（最好fq）</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-学习VI和VIM编辑器读书笔记（四）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/17/学习VI和VIM编辑器读书笔记（四）/" class="article-date">
+  	<time datetime="2016-05-17T15:28:12.462Z" itemprop="datePublished">2016-05-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/17/学习VI和VIM编辑器读书笔记（四）/">ex编辑器概述</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##<br>vi其实是更通用、更底层的ex行编辑器的”可视模式”</p>
+<p>###ex命令<br>ex命令中包含了行地址（可能只是一个行号）以及命令，以换行符结束。<br>一个最基本的命令是p，代表打印（到屏幕上）。<br>：1p    p可以省略，因为行号本身与显示出此行的命令是相同的。<br>显示多行（1，3—两个数值之间用逗号分隔，中建有没有空格无所谓）<br>替换命令：s<br>ag：    ：1s/one/two   将第一行的one换成two<br>在vi中使用ex命令，必须输入特定字符：（冒号）。输入命令后，按ENTER来执行。</p>
+<p>###用ex编辑<br>常用的ex命令与其缩写：<br>Full name    Abbreviation    Meaning<br>delete        d                删除行<br>move        m                移动行<br>copy        co                复制行<br>            t                复制行</p>
+<p>###行地址<br>每一个ex编辑命令都需要编辑的行号。而对ex的move与copy命令来说，还必须提供文本移动或复制的目的地。<br>指定行地址的方法有以下几种：<br>1、指定明确的行号<br>2、用符号来指定相对于当前位置的行号<br>3、标识某些行的搜索模式作为地址</p>
+<p>####定义行范围<br>明确指定行号的地址称为绝对行地址<br>eg：<br>：3,18d        删除第3行到第18行<br>：160,224m23        将第160行到第224行移动到第23行之后<br>：23,29co100        将第23行到29行复制到第100行之后</p>
+<p>禁用set行号选项<br>：set nonu<br>暂时显示行号<br>：1，10#<br>ex的=命令<br>：=        列出文件的总行数<br>：.=        列出当前所在行的行号<br>：/pattern/=        列出pattern第一次出现时的行号</p>
+<p>####行寻址符号<br>用符号表示行地址。<br>点号（.)表示当前这一行<br>$表示文件的最后一行<br>%表示文件中的每一行 == 1,$<br>eg:<br>:.,$d        删除当前这一行到文件结尾间的文本<br>:20,.m$        将第20行到当前这一行间的文本移动到文件结尾<br>使用相对地址（+与-）（++与–）<br>：.,.+20d        删除当前这一行到20行之后的行之间的文本<br>：226,$m.-2        将226行到文件结尾间的行移动到当前行的两行之前<br>：.,+20#            显示当前这一行及向下20行之间的行号<br>（.点号时=是可以省略的，当前行会被假定为开始的位置）<br>数字0表示文件的开头</p>
+<p>####搜索模式<br>另一个可以指定行地址的方法是使用搜索模式<br>eg：<br>:/pattern/d            删除下一个包含pattern的行<br>:/pattern/+d        删除下一个包含pattern的行的下一行</p>
+<p>###重新定义当前这一行的位置<br>使用分号代替逗号时，第一个行地址会被当成光标当前的地址。<br>eg：<br>：100;+5 p<br>此时的+5是相对于第100行计算的，而不是光标所在的位置。<br>分号对于搜索模式的绝对地址很有用。</p>
+<p>###全局搜索<br>ex全局命令g<br>:g     搜索模式并显示所有包含这个模式的行。<br>:g!        搜索所有不包含指定模式的行  ==  ：v</p>
+<p>eg:<br>:g/pattern        寻找文件中最后一次出现pattern的地方<br>:g/pattern/p    寻找并显示文件中所有包含pattern的行<br>:20,40g!/pattern/p        寻找并显示第20到40行之间不包含pattern的行</p>
+<p>###合并ex命令<br>在ex中，竖线（|）可以分割命令。<br>在使用时，记住所指定的行地址。如果某个命令影响了文件中各行的顺序，下一个命令将在新的行地址上运作。<br>eg：<br>：1，3d | s/thire/their/<br>删除第一行到第3行，接着在当前行做替换（即原来的第四行）</p>
+<p>###保存于离开文件</p>
+<p>:w        将缓冲区的内容写入文件中，但不离开。<br>:q        离开编辑器<br>:wq        写入文件同时离开编辑器<br>:x        写入文件同时离开编辑器。（只有文件修改过才会写入）<br>:w!        强制写入文件<br>:q!        离开编辑器而不影响原来的文件</p>
+<p>####更改缓冲区名称<br>:w    newfile        将缓冲区以新的文件名保存，原来的文件内容不会改变。</p>
+<p>####保存一部分的文件<br>将行寻址命令与写入命令w相结合可以保存一部分文件。<br>:20,$w newfile         将第20行到文件结尾保存成名为newfile的文件</p>
+<p>####附加内容到已保存的文件<br>附加运算符（&gt;&gt;）<br>:1,10w newfile<br>:340,$w &gt;&gt;newfile<br>将第1-10行以及第340行到缓冲区的结尾写入newfile中</p>
+<p>###将一个文件复制到另一个文件</p>
+<p>:read filename 或 :r filename 把filename的内容插入到光标所在位置的下一行。<br>:11r /home/data        将data的内容插入到当前文件11行的下一行。<br>:/pattern/r /home/data   将读入的文件放在第一个出现pattern的行之后。</p>
+<p>###编辑多个文件</p>
+<p>####用vi同时打开多个文件<br>vi file1 file2<br>即可先编辑file1，然后使用ex命令：w 写入（存储）file1，此时：n会调用下一个文件（file2）</p>
+<p>####使用参数列表</p>
+<p>:args参数（简写为:ar）可列出命令行上的文件列表，当前编辑中的文件名称以方括号括起。<br>:rewind(:rew) 命令会将当前文件复位成命令行上的第一个文件。<br>vim提供了对应的命令：last，用于移动其成命令行上的最后一个。</p>
+<p>####调用新文件</p>
+<p>:e命令可以在任何时候切换到另一个文件<br>如果要在vi中编辑另一个文件，必须先保存当前文件（：w），再下命令 ：e filename</p>
+<p>vi会同时记住两个文件名，作为当前的与候补的文件名，他们用<br>符号% （代表当前的文件名）与 #（代表候补的文件名）来表示。<br>:e # 回到上一个文件    :r # 将上一个文件的内容读到当前的文件中。（前提是当前文件保存）<br>:e!  放弃编辑结果，并恢复当前文件的上一个已保存版本的内容。（重新载入文件）</p>
+<p>%主要用于写出当前缓冲区的内容到另一个新文件中。<br>:w %.new</p>
+<p>####在vi中切换文件<br>ctrl+^ 命令可用于切换文件（当前缓冲区的内容已经保存）</p>
+<p>###在文件之间做编辑<br>使用命名缓冲区<br>“f4yy<br>:w<br>:e letter<br>“fp</p>
+<p>使用ex命令：ya（拖动）与：pu（放置）</p>
+<p>eg：<br>:160,220ya  a<br>将第160行到第220行之间的文本复制到缓冲区a中。<br>:e filenew   将光标移动到放置文本的行<br>:pu a<br>将缓冲区a的内容放置到当前行的下一行。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-学习VI和VIM编辑器读书笔记（三）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/17/学习VI和VIM编辑器读书笔记（三）/" class="article-date">
+  	<time datetime="2016-05-17T13:13:46.723Z" itemprop="datePublished">2016-05-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/17/学习VI和VIM编辑器读书笔记（三）/">越过基础的藩篱</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="更多命令组合"><a href="#更多命令组合" class="headerlink" title="更多命令组合"></a>更多命令组合</h2><p>更改            删除            复制            从光标位置到……<br>cH            dH            yH            屏幕顶端<br>cL            dL            yL            屏幕底端<br>c+            d+            y+            下一行<br>c5|            d5|            y5|            本行的第5列<br>2c）            2d）            2y）            往下第二个句子<br>c{            d{            y{            上一段<br>c/pattern    d/pattern    y/pattern    pattern（模式）<br>cn            dn            yn            下一个模式<br>cG            dG            yG            文件结尾<br>c13G        d13G        y13G        第13行</p>
+<h3 id="打开vi的选项"><a href="#打开vi的选项" class="headerlink" title="打开vi的选项"></a>打开vi的选项</h3><h4 id="前进到特定位置"><a href="#前进到特定位置" class="headerlink" title="前进到特定位置"></a>前进到特定位置</h4><p>vi +n  file        在第n行打开file<br>vi +   file        在最后一行打开file<br>vi +/pattern  file   在第一次出现pattern的地方打开file</p>
+<p>如果模式中包含空格，则需要单引号或双引号括起整个模式，或者用反斜线将空格转义。<br>+/pattern 在你编辑到一半却必须离开时很有用。你可以将当前位置用某个模式标记起来，如ZZZ或HEAR。当你回来时，只要记得/ZZZ或/HEAR就可以了。</p>
+<p>####只读模式</p>
+<p>vi  -R  file<br>或  view  file<br>若想要更改文件内容，可以在write命令（：w）后面加上感叹号，以覆盖掉只读模式：<br>：w！</p>
+<p>####恢复缓冲区<br>恢复系统死机时的编辑缓冲区<br>vi -r file<br>（推荐使用vi的autowrite与autosave选项）</p>
+<p>###善加利用缓冲区<br>编辑时的最后一次删除或拖拽的内容会保存到缓冲区中。我们可以访问这些缓冲区并使用放置命令（p或P）将这些保存的文本放回文件中。</p>
+<p>vi会将最后9次的删除操作保存在编号的缓冲区中，你可以访问其中任何一个，以恢复任何一次（或所有）的删除操作。</p>
+<p>vi也可以让你将拖拽（复制）的文本放在依字母标识的缓冲区中。拖拽的文本可以被保存到26个缓冲区（a~z）中，并且可在编辑会话的任何时候，使用放置命令来恢复这些文本。</p>
+<p>####恢复删除</p>
+<p>最后一次删除的内容放在缓冲区1，倒数第二次的则存放在缓冲区2。。。</p>
+<p>“np     将缓冲区n（1~9）的内容恢复到光标后。</p>
+<p>“1pu.u.u 以此类推     逐一将每个缓冲区的内容放置到文件中。每一次输入u时，恢复的文本会被移除。输入点号时，则把下一个缓冲区的内容恢复到文件中。不断输入u与.，直到找到所需的文本为止。</p>
+<p>####将文本拖拽到命名缓冲区<br>“dyy    将当前行复制到缓冲区d中</p>
+<p>“dp        将缓冲区d的内容放置在光标后<br>“dP        将缓冲区d的内容放置在光标前</p>
+<p>（使用命名缓冲区在文件间传递部分文本）</p>
+<p>使用大写字母指定缓冲区名称，则复制或删除的文本会追加到当前缓冲区中。<br>“Z3yy   将3行的内容追加到缓冲区z中</p>
+<p>####在一处做标记</p>
+<p>在一个vi会话中，你可以在某处做一个看不见的”书签”，然后在别处编辑，完成后再回到书签位置。可在命令模式中输入：<br>mx     将当前位置标记成x（x可以是任何字符）<br>‘x        （单引号）将光标移到标记x所在行的第一个字符<br>`x        （反引号）将光标移到以x标记的字符<br>``        （两个反引号）在移动位置后，回到上一个标记或上下文的确切位置<br>‘’        （两个单引号）回到上一个标记或上下文所在行的开头<br>注意：标记只有在当前vi会话中有用。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-学习VI和VIM编辑器读书笔记（二）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/16/学习VI和VIM编辑器读书笔记（二）/" class="article-date">
+  	<time datetime="2016-05-16T02:17:15.544Z" itemprop="datePublished">2016-05-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/16/学习VI和VIM编辑器读书笔记（二）/">快速移动位置</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="根据屏幕来移动"><a href="#根据屏幕来移动" class="headerlink" title="根据屏幕来移动"></a>根据屏幕来移动</h2><h3 id="滚动一整屏"><a href="#滚动一整屏" class="headerlink" title="滚动一整屏"></a>滚动一整屏</h3><p>^F   往前滚动一整屏<br>^B   往后滚动一整屏<br>^D   往下滚动半屏<br>^U     往上滚动半屏<br>（ ^代表<strong>CTRL</strong>键）</p>
+<h3 id="用z重新调整屏幕位置"><a href="#用z重新调整屏幕位置" class="headerlink" title="用z重新调整屏幕位置"></a>用z重新调整屏幕位置</h3><p>z enter 将光标所在位置移动到屏幕顶端</p>
+<p>z.        将光标位置移动到屏幕中心<br>z-        将光标位置移动到屏幕底端</p>
+<p>[n]z    将第n行移动到屏幕顶端</p>
+<h3 id="光标的移动"><a href="#光标的移动" class="headerlink" title="光标的移动"></a>光标的移动</h3><p>H    移到屏幕顶端的行<br>M    移到屏幕中央的行<br>L    移到屏幕底端的行<br>nH    移到屏幕顶端往下的第n行<br>nL    移到屏幕底端往上的第n行</p>
+<h3 id="根据行移动"><a href="#根据行移动" class="headerlink" title="根据行移动"></a>根据行移动</h3><p>ENTER    移到下一行的第一个字符</p>
+<pre><code>+    移到下一行的第一个字符
+-    移到上一行的第一个字符
+</code></pre><h4 id="在当前行移动"><a href="#在当前行移动" class="headerlink" title="在当前行移动"></a>在当前行移动</h4><p>^     移动到当前行的第一个非空格处<br>n|   移到当前行的第n列</p>
+<h3 id="根据文本块来移动"><a href="#根据文本块来移动" class="headerlink" title="根据文本块来移动"></a>根据文本块来移动</h3><p>e    移到单词的结尾<br>E    移到单词的结尾（忽略标点符号）<br>（    移到当前句子的开头<br>）    移到下一个句子的开头<br>{    移到当前段的开头<br>}    移到下一段的开头<br>[[    移到当前节的开头<br>]]  移到下一节的开头</p>
+<p>（可以加上数值参数）</p>
+<h3 id="根据搜索模式的结果来移动"><a href="#根据搜索模式的结果来移动" class="headerlink" title="根据搜索模式的结果来移动"></a>根据搜索模式的结果来移动</h3><p>/pattern（模式）ENTER<br>从光标所在位置开始往前搜索，如果需要则绕回文件的开头。<br>？pattern<br>从光标所在位置往回搜索。</p>
+<p>####重复搜索（重复上一个命令但方向可控）<br>n    往同一个方向重复搜索<br>N    往相反的方向重复搜索<br>/ENTER    往前重复搜索<br>？ENTER    往后重复搜索</p>
+<p>vi中的一个选项wrapscan，可以控制搜索是否要绕回开头。<br>取消   ：set nowrapscan</p>
+<p>####通过搜索修改文本<br>/与?搜索运算符可以与更改文本的命令结合。如c和d的结合<br>d？pattern   从光标位置开始向前删除到出现匹配字符串的地方（不包括字符串）。</p>
+<p>###在当前行中搜索（移动）</p>
+<p>fx    将光标移动到本行中下一个出现x的地方。<br>Fx    将光标移动到本行中上一个出现x的地方<br>tx    将光标移动到下一个出现x的地方的前一个字符。<br>Tx    将光标移动到本行中上一个出现x的地方的前一个字符。<br>；    重复上一个搜索命令，方向相同。<br>，    重复上一个搜索命令，方向相反。</p>
+<p>可以用数值参数修饰</p>
+<p>与更改命令组合：<br>dfx        删除到下一个x字符为止的所有文本，包括x字符。<br>这个命令在删除或拖拽一行的一部分时很有用。</p>
+<p>###根据行号来移动</p>
+<p>设置显示行号<br>：set nu</p>
+<p>CTRL-G    命令会在屏幕底端显示信息：文件名，当前行号，文件总行数，百分比。</p>
+<p>G命令<br>[n]G    移动到第n行<br>``(反引号)    回到原来位置<br>‘’（引号）     回到原来位置所在行的开头</p>
+<p>###vi移动命令的复习</p>
+<p>往前滚动一整屏                            ^F<br>往后滚动一整屏                            ^B<br>往前移动半屏                                ^D<br>往后移动半屏                                ^U<br>往前滚动一行                                ^E<br>往后滚动一行                                ^Y<br>将当前行移到屏幕顶端并滚动屏幕                z ENTER<br>将当前行移到屏幕中心并滚动屏幕                z.<br>将当前行移到屏幕底端并滚动屏幕                z-<br>重画屏幕                                    ^L<br>移到home位置（屏幕的顶端）                    H<br>移到屏幕中间的那一行                        M<br>移到屏幕的底端                            L<br>移到下一行的第一个字符                        ENTER<br>移到下一行的第一个字符                        +<br>移到上一行的第一个字符                        -<br>移到当前行的第一个非空格字符                ^<br>移到当前行的第n个字符                        n|<br>移到单词的结尾                            e<br>移到单词的结尾（忽略标点符号）                E<br>移到当前句子的开头                            (<br>移到下一个句子的开头                        )<br>移到当前这一段的开头                        {<br>移到下一段的开头                            }<br>移到当前这一节的开头                        [[<br>移动到下一节的开头                            ]]<br>往前搜索模式                                /pattern<br>往后搜索模式                                ?pattern<br>往同一个方向重复搜索                        n<br>往相反方向重复搜索                            N<br>往前重复搜索                                /<br>往后重复搜索                                ?<br>搜索当前行中下一个出现x的地方                fx<br>搜索当前行中上一个出现x的地方                Fx<br>搜索当前行中下一个出现x的地方的前一个字符    tx<br>搜索当前行中下一个出现x的地方的后一个字符    Tx<br>重复上一个搜索命令，方向相同                ;<br>重复上一个搜索命令，方向相反                ,<br>转至第n行                                nG<br>转至文件结尾                                G<br>回到上一个记号或上下文                        ``<br>回到包含上一个记号的行的开头处                ‘’<br>显示当前的行号                            ^G</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-学习VI和VIM编辑器读书笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

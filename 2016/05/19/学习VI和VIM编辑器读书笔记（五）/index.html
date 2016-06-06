@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>全局替换 | SoulThinker&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ex命令： :g(global，全局)与:s(substitute，替换)替换命令：:s/old/new/        将当前行第一个出现的模式old替换为new:s/old/new/g    将当前行中的每一个old替换为new:%s/old/new/g    将每一行的所有old替换为new
+###确认替换在每次替换之前做确认，可以在替换命令的结尾加上c选项(confirm):1,30s/h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="全局替换">
+<meta property="og:url" content="http://yoursite.com/2016/05/19/学习VI和VIM编辑器读书笔记（五）/index.html">
+<meta property="og:site_name" content="SoulThinker's Blog">
+<meta property="og:description" content="ex命令： :g(global，全局)与:s(substitute，替换)替换命令：:s/old/new/        将当前行第一个出现的模式old替换为new:s/old/new/g    将当前行中的每一个old替换为new:%s/old/new/g    将每一行的所有old替换为new
+###确认替换在每次替换之前做确认，可以在替换命令的结尾加上c选项(confirm):1,30s/h">
+<meta property="og:updated_time" content="2016-05-23T06:04:46.721Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="全局替换">
+<meta name="twitter:description" content="ex命令： :g(global，全局)与:s(substitute，替换)替换命令：:s/old/new/        将当前行第一个出现的模式old替换为new:s/old/new/g    将当前行中的每一个old替换为new:%s/old/new/g    将每一行的所有old替换为new
+###确认替换在每次替换之前做确认，可以在替换命令的结尾加上c选项(confirm):1,30s/h">
+  
+    <link rel="alternative" href="/atom.xml" title="SoulThinker&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">张伟</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">笃实</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">张伟</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">张伟</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">笃实</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-学习VI和VIM编辑器读书笔记（五）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/19/学习VI和VIM编辑器读书笔记（五）/" class="article-date">
+  	<time datetime="2016-05-19T13:26:46.294Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      全局替换
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ex命令： :g(global，全局)与:s(substitute，替换)<br>替换命令：<br>:s/old/new/        将当前行第一个出现的模式old替换为new<br>:s/old/new/g    将当前行中的每一个old替换为new<br>:%s/old/new/g    将每一行的所有old替换为new</p>
+<p>###确认替换<br>在每次替换之前做确认，可以在替换命令的结尾加上c选项(confirm)<br>:1,30s/his/the/gc<br>确认替换，必须输入y再按下ENTER，不想替换，只要按下ENTER。</p>
+<p>将vi命令中的n（重复上一次搜索）与点号(.)（重复上一个命令）结合起来！<br>/which        搜索which<br>cwthatESC    改成that<br>n            重复搜索<br>n            重复搜索<br>.            重复修改</p>
+<h3 id="与上下文相关的替换"><a href="#与上下文相关的替换" class="headerlink" title="与上下文相关的替换"></a>与上下文相关的替换</h3><p>:g/pattern/s/old/new/g<br>第一个g指示对文件中的所有行起作用。<br>pattern用于识别发生替换的行。<br>对包含pattern的行，ex将old替换为new。<br>最后g表示在哪一行做全局替换。</p>
+<p>如果用于搜索行的模式与用于替换的模式一样，可以省略old<br>:g/string/s//new/g<br>== :%s/string/new/g</p>
+<p>###模式匹配的规则<br>正则表达式：将一般的字符与许多特殊的元字符结合起来的表达式、</p>
+<p>####用在搜索模式中的元字符<br>.(点号)<br>    匹配出任何单一字符（换行符除外）<br>*<br>    匹配出位于此符号前的单一字符，该字符可出现0到多次。<br>^<br>    在正则表达式的开头时，表示一行的开头<br>$<br>    在正则表达式的结尾时，代表一行的结尾<br>\<br>    将后续的特殊字符变为一般字符，阻止特殊字符被解释<br>[ ]<br>    匹配方括号里的任何一个字符    。<br>    在方括号中有3个元字符需要转义：\、-、].<br>    -表示范围指示符<br>    插入符号（^）位于方括号中的第一个时，表示匹配出任何一个不在方括号中字符范围内的字符。<br>( )<br>    将(和)间的模式保存到特殊的空间（保留缓冲区）可以保存任意一行中的9个模式。<br>    ：%s/(That) or (this)/\2 or \1/g<br>    That保存在保留缓冲区1中，this保存在保留缓冲区2中。这些保留的模式可以用\1-\9的序列重新显示。<br>\&lt; ><br>    匹配以某些字符开头（/&lt;）或结尾（/&gt;）的字符。</p>
+<h4 id="posix方括号表达式"><a href="#posix方括号表达式" class="headerlink" title="posix方括号表达式"></a>posix方括号表达式</h4><p>在posix标准中，方括号内的字符组称为“方括号表达式”<br>在方括号表达式中，除了a、！等文字字符之外，还包括其他的元素，包括：<br>字符类：包括了用 [:与:]括起来的关键字。关键字描述了不同的字符类，包括字母字符、控制字符等等。<br>校对符号：由多个字符组成的序列，但必须被当成一个单位（整体）。使用[. 与.]括起所需的字符。<br>等价类：等价类列出了所有应该被当做相等的字符集合。用[=与=]括起来。[=e=]可能匹配出e、`e.</p>
+<p>POSIX字符类型<br>类型                    比较出的字符<br>[:alnum:]            字母与数字字符<br>[:alpha:]            字母字符<br>[:cntrl:]            控制字符<br>[:lower:]            小写字符<br>[:digit:]            数字字符<br>[:upper:]            大写字符<br>…</p>
+<h4 id="用在替换字符串中的元字符"><a href="#用在替换字符串中的元字符" class="headerlink" title="用在替换字符串中的元字符"></a>用在替换字符串中的元字符</h4><p>在全局替换时，之前提到的元字符只在命令的搜索部分（第一部分）中有特殊意义。</p>
+<p>在替换字符串中有特殊意义的元字符：<br>\n（数字）：利用(与)存储的第n个模式的文字做代换，n表示数字1到9.<br>\    ：将后面的一个特殊字符当成一般的字符。<br>&amp;    ：用在替换字符串中时，会被替换成搜索模式匹配出的完整文本。<br>~    ：匹配的字符串会被最后一个替换命令中的替换文本替换。在重复编辑时很有用。<br>\u或\l：使替换字符串中的下一个字符变为大写或小写。<br>        eg： :s/(That) or (this)/\u\2 or \l\1/</p>
+<p>\U或\L与\e或\E<br>    :\U与\L将所有接在后面的字符都转换为大写或小写的，一直到替换字符串结束，或出现\e或\E为止。</p>
+<h4 id="更多替换技巧"><a href="#更多替换技巧" class="headerlink" title="更多替换技巧"></a>更多替换技巧</h4><p>:s 重复上一次替换<br>:%&amp;g 在所有地方重复上一个替换<br>:&amp;  重复上一个替换<br>:~    搜索的模式是上一个出现的正则表达式，替换的字符串是上一个替换命令中的字符串。<br>    :s/red/blue<br>    :/green<br>    :~  == :s/green/blue<br>替换命令的分割字符除了/之外，可以为任何非字母、非数值、非空格的字符； 但是反斜线、双引号、与竖线例外。更改路径名称时  :s;/user;/home;g</p>
+<h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><p>将所有出现的help（或Help）改为HELP<br> :%s/[Hh]elp/\U&amp;/g<br>删除所有空白行<br>:g/^$/d</p>
+<p>思考一个匹配模式时，通常比较好的做法是更精准地修改变量（元字符），而不是用特定的文字来限制模式。在模式中运用越多变量，命令的力量就会越强大。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/23/学习VI和VIM编辑器读书笔记（六）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          高级编辑方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/18/Centos6.5安装YouCompleteMe过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Centos6.5安装YouCompleteMe（自动补全工具）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="学习VI和VIM编辑器读书笔记（五）" data-title="全局替换" data-url="http://yoursite.com/2016/05/19/学习VI和VIM编辑器读书笔记（五）/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 张伟
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

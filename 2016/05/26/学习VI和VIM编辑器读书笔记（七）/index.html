@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>vi同类品的功能总览 | SoulThinker&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在这里，我们只关注一些vim的功能主题。
+多窗口编辑缓冲区：保存了要编辑的文本。任何一个 文件都只有一个对应的缓冲区。窗口：提供对缓冲区的观察窗口，让我们可以查看与修改缓冲区中的内容。
+扩展正则表达式以后学习
+增强的标签标签栈：用：tag或^]命令来存储多个访问过的位置。
+Exuberant ctagsExuberant ctags插件能够产生所有类型的c与c++语言标签支持c与c++代码
+新的t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vi同类品的功能总览">
+<meta property="og:url" content="http://yoursite.com/2016/05/26/学习VI和VIM编辑器读书笔记（七）/index.html">
+<meta property="og:site_name" content="SoulThinker's Blog">
+<meta property="og:description" content="在这里，我们只关注一些vim的功能主题。
+多窗口编辑缓冲区：保存了要编辑的文本。任何一个 文件都只有一个对应的缓冲区。窗口：提供对缓冲区的观察窗口，让我们可以查看与修改缓冲区中的内容。
+扩展正则表达式以后学习
+增强的标签标签栈：用：tag或^]命令来存储多个访问过的位置。
+Exuberant ctagsExuberant ctags插件能够产生所有类型的c与c++语言标签支持c与c++代码
+新的t">
+<meta property="og:updated_time" content="2016-06-06T14:26:09.594Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vi同类品的功能总览">
+<meta name="twitter:description" content="在这里，我们只关注一些vim的功能主题。
+多窗口编辑缓冲区：保存了要编辑的文本。任何一个 文件都只有一个对应的缓冲区。窗口：提供对缓冲区的观察窗口，让我们可以查看与修改缓冲区中的内容。
+扩展正则表达式以后学习
+增强的标签标签栈：用：tag或^]命令来存储多个访问过的位置。
+Exuberant ctagsExuberant ctags插件能够产生所有类型的c与c++语言标签支持c与c++代码
+新的t">
+  
+    <link rel="alternative" href="/atom.xml" title="SoulThinker&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">张伟</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">笃实</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">张伟</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">张伟</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">笃实</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-学习VI和VIM编辑器读书笔记（七）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/26/学习VI和VIM编辑器读书笔记（七）/" class="article-date">
+  	<time datetime="2016-05-26T08:34:04.872Z" itemprop="datePublished">2016-05-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vi同类品的功能总览
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在这里，我们只关注一些vim的功能主题。</p>
+<h3 id="多窗口编辑"><a href="#多窗口编辑" class="headerlink" title="多窗口编辑"></a>多窗口编辑</h3><p>缓冲区：保存了要编辑的文本。任何一个 文件都只有一个对应的缓冲区。<br>窗口：提供对缓冲区的观察窗口，让我们可以查看与修改缓冲区中的内容。</p>
+<h3 id="扩展正则表达式"><a href="#扩展正则表达式" class="headerlink" title="扩展正则表达式"></a>扩展正则表达式</h3><p>以后学习</p>
+<h3 id="增强的标签"><a href="#增强的标签" class="headerlink" title="增强的标签"></a>增强的标签</h3><p>标签栈：用：tag或^]命令来存储多个访问过的位置。</p>
+<h4 id="Exuberant-ctags"><a href="#Exuberant-ctags" class="headerlink" title="Exuberant ctags"></a>Exuberant ctags</h4><p>Exuberant ctags插件<br>能够产生所有类型的c与c++语言标签<br>支持c与c++代码</p>
+<h4 id="新的tags文件格式"><a href="#新的tags文件格式" class="headerlink" title="新的tags文件格式"></a>新的tags文件格式</h4><p>传统的tags文件有三个制表符分割的字段：<br>标签名称（一般是标识符）、包含标签的源文件、何处可找到标识符的指示符。<br>新的格式：<br>标签名称（一般是标识符）、包含标签的源文件、何处可找到标识符的指示符:;、描述属性的关键字：实际的值（可有多个，以tab分隔）<br>扩展的ctags关键字<br>关键字    意义<br>kind    单一字母，代表标签的词汇类型。f：函数、v：变量等<br>file    针对“静态”的标签，值为文件的名称。若值为空，则会以文件名字段为准。<br>function    针对本地的标签。其值是所定义的函数的名称。<br>struct        针对struct中的字段。其值是结构的名称。<br>enum        针对enum数据类型的值。其值为enum类型的名称。<br>class        针对c++的成员函数与变量。其值是类的名称。<br>scope        针对C++的类成员函数。（priviate）<br>arity        针对函数。定义参数的个数。</p>
+<p>eg：<br>ARRAYMAXED    awk.h    427;”     d<br>AVG_CHAIN_MAX    array.c    28;”    d    file:<br>array.c        array.c        1;”        F<br>第三个使用：tag array.c命令。或者将光标移动到文件名上，再使用^[命令移到该文件中。</p>
+<h4 id="标签栈"><a href="#标签栈" class="headerlink" title="标签栈"></a>标签栈</h4><p>以后说明</p>
+<h4 id="Exuberant-ctags与vim"><a href="#Exuberant-ctags与vim" class="headerlink" title="Exuberant ctags与vim"></a>Exuberant ctags与vim</h4><p>创建tags文件，然后编辑主程序（137页）<br>ctags *.[ch]<br>ls<br>Makefile getopt.c tags getopt.h main.c<br>vim main.c</p>
+<h4 id="改进的便利功能"><a href="#改进的便利功能" class="headerlink" title="改进的便利功能"></a>改进的便利功能</h4><p>编辑ex命令行（历史记录与命令补全）–之后介绍<br>没有行长度的限制<br>不限次数的撤销<br>增量搜索：输入欲搜索的模式可立即在文本中开始搜索<br>        选项：incsearch<br>左右滚动        滚动量 sidescroll = 0  选项 wrap<br>可视模式<br>模式指示器    选项：showmode</p>
+<h4 id="编程辅助"><a href="#编程辅助" class="headerlink" title="编程辅助"></a>编程辅助</h4><h4 id="编辑-编译的加速"><a href="#编辑-编译的加速" class="headerlink" title="编辑-编译的加速"></a>编辑-编译的加速</h4><p>在文件中直接编译<br>：make file<br>后面介绍</p>
+<h4 id="语法高亮显示"><a href="#语法高亮显示" class="headerlink" title="语法高亮显示"></a>语法高亮显示</h4><p>省略</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/23/学习VI和VIM编辑器读书笔记（六）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">高级编辑方法</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="学习VI和VIM编辑器读书笔记（七）" data-title="vi同类品的功能总览" data-url="http://yoursite.com/2016/05/26/学习VI和VIM编辑器读书笔记（七）/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 张伟
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
